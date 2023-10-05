@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.5f87fba7.css",
+    "main.js": "/Portfolio/static/js/main.0703a129.js",
+    "static/media/photo-sebastien2.webp": "/Portfolio/static/media/photo-sebastien2.726ef8033185d70e20ef.webp",
+    "static/media/logo-portfolio.webp": "/Portfolio/static/media/logo-portfolio.ddeb3585f06e0167f447.webp",
+    "static/media/image-numerique.jpg": "/Portfolio/static/media/image-numerique.9337bfdd2044f1e9129c.jpg",
+    "static/media/instagram.png": "/Portfolio/static/media/instagram.79535458a8a6d88f81d4.png",
+    "static/media/hireme.webp": "/Portfolio/static/media/hireme.39e2cde560b4087dfa0b.webp",
+    "static/media/twitter.png": "/Portfolio/static/media/twitter.894988327f8d68209e91.png",
+    "static/media/linkedin.png": "/Portfolio/static/media/linkedin.f249b38224ca41a0b909.png",
+    "static/media/image-contact.webp": "/Portfolio/static/media/image-contact.08665b05b3b4076eaafd.webp",
+    "index.html": "/Portfolio/index.html",
+    "static/media/burger-bar.webp": "/Portfolio/static/media/burger-bar.60e8a823d4f990b77309.webp",
+    "main.5f87fba7.css.map": "/Portfolio/static/css/main.5f87fba7.css.map",
+    "main.0703a129.js.map": "/Portfolio/static/js/main.0703a129.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f87fba7.css",
+    "static/js/main.0703a129.js"
+  ]
+}
