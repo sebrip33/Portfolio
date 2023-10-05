@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url("./background/image-digital.webp");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    overflow: hidden;
+    overflow-y: scroll;
+}

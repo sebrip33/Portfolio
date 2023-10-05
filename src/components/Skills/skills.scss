@@ -1,0 +1,64 @@
+#skills {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    .skillTitle {
+        font-size: 3rem;
+        font-weight: 600;
+        padding-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .skillDesc {
+        font-weight: 400;
+        font-size: 1rem;
+        max-width: 50rem;
+        margin: 0 2rem;
+    }
+
+    .skills-dropdown {
+        margin: 1.5rem;
+        width: 100vw;
+        max-width: 80%;
+
+        .skills-dropdown-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 680px) {
+    #skills {
+
+        .skillTitle {
+            padding-top: 0;
+        }
+
+        .skills-dropdown {
+            max-width: 90%;
+
+            .skills-dropdown-header {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #skills {
+
+        .skillTitle {
+            font-size: 2.5rem;
+            padding-top: 0;
+        }
+    }
+}
