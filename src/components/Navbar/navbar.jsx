@@ -20,7 +20,9 @@ const Navbar = () => {
     }, []);
     return (
         <nav className="navbar">
-            <img src={logo} alt="logo" className='logo' />
+            <a href="https://sebrip33.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">
+                <img src={logo} alt="logo" className='logo' />
+            </a>
             <div className="desktopMenu">
                 <Link activeClass='active' to="intro" spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>À propos</Link>
                 <Link activeClass='active' to="skills" spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Mes services</Link>

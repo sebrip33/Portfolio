@@ -4,7 +4,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik'
 import * as Yup from 'yup';
 import LinkedinIcon from '../../assets/linkedin.png'
 import Twitter from '../../assets/twitter.png'
-import Facebook from '../../assets/facebook.png'
+import GitHub from '../../assets/github-mark.png'
 import Instagram from '../../assets/instagram.png'
 import emailjs from '@emailjs/browser'
 
@@ -59,7 +59,9 @@ function Contact() {
             </Formik>
             <div className='links'>
                 <img src={LinkedinIcon} alt="LinkedIn" className='link' />
-                <img src={Facebook} alt="Facebook" className='link' />
+                <a href="https://github.com/sebrip33" target="_blank" rel="noopener noreferrer">
+                  <img src={GitHub} alt="GitHub" className='link' />
+                </a>
                 <img src={Twitter} alt="Twitter" className='link' />
                 <img src={Instagram} alt="Instagram" className='link' />
             </div>
