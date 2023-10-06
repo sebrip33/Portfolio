@@ -8,6 +8,7 @@ function MyModal({ isOpen, onRequestClose, images }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const closeModal = () => {
+    setCurrentSlide(0);
     onRequestClose();
   };
 

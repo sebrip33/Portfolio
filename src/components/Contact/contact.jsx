@@ -42,21 +42,22 @@ function Contact() {
                 }}
             >
                 <Form className='contactForm'>
-                    <label htmlFor="name"></label>
-                    <Field type="text" className="name" placeholder="Votre Nom" name="your_name"/>
-                    <ErrorMessage name="name" />
+                    <label htmlFor="your_name">Votre Nom</label>
+                    <Field id="your_name" type="text" className="name" placeholder="Votre Nom" name="your_name"/>
+                    <ErrorMessage name="your_name" />
 
-                    <label htmlFor="email"></label>
-                    <Field type="email" className="email" placeholder="Votre Email" name="your_email"/>
-                    <ErrorMessage name="email" />
+                    <label htmlFor="your_email">Votre Email</label>
+                    <Field id="your_email" type="email" className="email" placeholder="Votre Email" name="your_email"/>
+                    <ErrorMessage name="your_email" />
 
-                    <label htmlFor="message"></label>
-                    <Field as="textarea" className="msg" rows="5" placeholder="Votre Message" name="message"/>
+                    <label htmlFor="message">Votre Message</label>
+                    <Field id="message" as="textarea" className="msg" rows="5" placeholder="Votre Message" name="message" aria-label="Votre Message"/>
                     <ErrorMessage name="message" />
 
                     <button type="submit" value="Send" className='submitBtn'>Envoyer</button>
                 </Form>
             </Formik>
+
             <div className='links'>
                 <a href="https://www.linkedin.com/in/s%C3%A9bastien-ripert-769106295/" target="_blank" rel="noopener noreferrer">
                     <img src={LinkedinIcon} alt="LinkedIn" className='link' />

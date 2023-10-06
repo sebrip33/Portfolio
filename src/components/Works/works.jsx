@@ -16,26 +16,10 @@ function Works() {
     const [works, setWorks] = useState([]);
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [selectedWorkImages, setSelectedWorkImages] = useState([]);
-
+    const [isLoading, setIsLoading] = useState(false);
     const storage = getStorage();
 
-    // Ouverture de la modale
-    const openModal = async (workId) => {
-        const workDetailsData = await getWorkDetailsData(workId);
     
-        const updatedWorksDetailsData = await Promise.all(
-            workDetailsData[0].images.map(async (imagePath) => {
-                const gsReference = ref(storage, imagePath);
-                const url = await getDownloadURL(gsReference);
-                return url;
-            })
-        );
-
-        setSelectedWorkImages(updatedWorksDetailsData);
-        setModalIsOpen(true);
-        console.log("modalIsOpen: ", modalIsOpen);
-        console.log("updatedWorksDetailsData: ", updatedWorksDetailsData)
-    };
     
     // Fermeture de la modale
     const closeModal = () => {
@@ -45,7 +29,7 @@ function Works() {
     useEffect(() => {
         const fetchWorks = async () => {
           const worksData = await getWorksData();
-
+    
           const storage = getStorage();
           const updatedWorksData = await Promise.all(
             worksData.map(async (work) => {
@@ -58,12 +42,30 @@ function Works() {
                 };
             })
           );
-
+    
           setWorks(updatedWorksData);
         };
-  
-      fetchWorks();
+    
+        fetchWorks();
     }, []);
+    
+    const openModal = async (workId) => {
+        setIsLoading(true);
+        const workDetailsData = await getWorkDetailsData(workId);
+    
+        const updatedWorksDetailsData = await Promise.all(
+            workDetailsData[0].images.map(async (imagePath) => {
+                const gsReference = ref(storage, imagePath);
+                return await getDownloadURL(gsReference);
+            })
+        );
+    
+        setSelectedWorkImages(updatedWorksDetailsData);
+        setModalIsOpen(true);
+        setIsLoading(false);
+    };
+
+
 
     return (
         <section id='works'>
@@ -85,6 +87,7 @@ function Works() {
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 images={selectedWorkImages}
+                isLoading={isLoading}
             >
 
             </MyModal>
