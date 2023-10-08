@@ -49,7 +49,7 @@ function Works() {
         fetchWorks();
     }, []);
     
-    const openModal = async (workId) => {
+    const openModal = async (workId, images) => {
         setIsLoading(true);
         const workDetailsData = await getWorkDetailsData(workId);
     
@@ -60,7 +60,7 @@ function Works() {
             })
         );
     
-        setSelectedWorkImages(updatedWorksDetailsData);
+        setSelectedWorkImages(updatedWorksDetailsData, images);
         setModalIsOpen(true);
         setIsLoading(false);
     };
@@ -74,7 +74,7 @@ function Works() {
              Chaque projet est le reflet de ma passion pour le codage et mon engagement à créer des solutions efficaces et innovantes. Bonne exploration !</span>
              <div className='work-list-container'>
                 {works.map((work) => (
-                <div className='work-card' key={work.id} onClick={() => openModal(work.id)}>
+                <div className='work-card' key={work.id} onClick={() => openModal(work.id, work.images)}>
                     <img className='work-cover' src={work.imageUrl} alt={work.title} />
                     <div className='work-card-description'>
                         <h3 className='img-title'>{work.title}</h3>

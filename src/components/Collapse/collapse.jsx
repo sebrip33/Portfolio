@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import './collapse.scss'
-import ArrowUp from '../../assets/arrowup.png'
+import ArrowDown from '../../assets/arrowdown.png'
 
 function Collapse({ title, text }) {
   // État pour contrôler l'ouverture/fermeture du Collapse
@@ -25,8 +25,8 @@ function Collapse({ title, text }) {
     <div className={`container ${open ? 'open' : ''}`}>
       <div className="collapse-header" onClick={toggleCollapse}>
         <h2>{title}</h2>
-        {/* Utiliser ArrowUp en fonction de l'état "open" */}
-        <img src={ArrowUp} alt={'Flêche haut'} className="arrow-icon" />
+        {/* Utiliser ArrowDown en fonction de l'état "open" */}
+        <img src={ArrowDown} alt={'Flêche haut'} className="arrow-icon" />
       </div>
       <div
         className="collapse-text-container"
