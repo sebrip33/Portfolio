@@ -12,6 +12,10 @@ function MyModal({ isOpen, onRequestClose, images }) {
     onRequestClose();
   };
 
+  const openModal = () => {
+    setCurrentSlide(0); // Initialisation de currentSlide
+  };
+
 
   // Fonction pour passer à la diapositive suivante
   const nextSlide = () => {
@@ -26,7 +30,7 @@ function MyModal({ isOpen, onRequestClose, images }) {
   }
 
   // Vérifie s'il y a plus d'une image pour afficher les flèches et le numéro du carrousel
-  const showArrowsAndNumber = images.length > 1
+  const showArrowsAndNumber = images && images.length > 1
 
   // Utilise un effet pour définir un intervalle de défilement automatique toutes les 7 secondes
   useEffect(() => {

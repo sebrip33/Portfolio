@@ -18,10 +18,10 @@ initializeApp(firebaseConfig);
 const auth = getAuth()
 signInAnonymously(auth)
   .then((userCredential) => {
-    // Vous pouvez accéder aux informations de l'utilisateur connecté avec userCredential.user
+    
   })
   .catch((error) => {
-    // Gérer les erreurs ici.
+    
     console.error(error);
   });
   
